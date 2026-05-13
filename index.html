@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Mfs</title>
+    <!-- daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwindcss -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="mockup-phone-camera"></div>
+        <div class="mockup-phone-display grid bg-gray-300">
+          <!-- log in  -->
+          <div class="w-full mt-auto mb-auto">
+            <div class="flex-col items-center justify-center  w-full">
+              <div class="w-full">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <!-- <div class="text-center lg:text-left">
+      <h1 class="text-5xl font-bold">Login now!</h1>
+      <p class="py-6">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p>
+    </div> -->
+    <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label text-lg text-black">Phone number</label>
+          <input id="phone-number" type="text" class="input outline-solid p-2" placeholder="Enter phone number" />
+          <label class="label text-lg text-black">4 digit PIN</label>
+          <input id="pin" type="password" class="input outline-solid p-2" placeholder="PIN" />
+          <div><a class="link link-hover text-base text-black">Forgot PIN?</a></div>
+          <button id="login" class="btn btn-neutral mt-4">Login</button>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </main>
+    <script src="login.js"></script>
+  </body>
+</html>

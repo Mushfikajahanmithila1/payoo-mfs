@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="mockup-phone-camera"></div>
+        <div class="mockup-phone-display text-white grid bg-gray-300">
+          <!-- available balance -->
+          <div class="stats shadow flex justify-center items-center mb-28">
+            <div class="stat bg-slate-100 w-40 h-24">
+              <div class="stat-value text-black">
+                $2,100
+                <div class="stat-title">Available Balance</div>
+              </div>
+            </div>
+          </div>
+          <div class="divider mb-40">
+            <!-- action buttons -->
+            <div class="flex justify-center items-start">
+              <button class="btn btn-lg">Add Money</button>
+              <button class="btn btn-lg">Cash out</button>
+            </div>
+            
+          </div>
+      <!-- form -->
+       <div class="flex justify-center items-center mb-36 text-black">
+             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label"> Amout </label>
+          <input type="text" id="in-add-money" class="input" placeholder="amount" />
+          <label class="label">pin </label>
+          <input id="in-pin" type="password" class="input" placeholder="pin" />
+          <button id="add-money" class="btn btn-neutral mt-4">Add Money</button>
+        </fieldset>
+      </div>
+        </div>
+       </div>
+      </div>
+    </main>
+    <script src="home.js"></script>
+  </body>
+</html>
