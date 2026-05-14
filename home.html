@@ -18,23 +18,25 @@
         <div class="mockup-phone-camera"></div>
         <div class="mockup-phone-display text-white grid bg-gray-300">
           <!-- available balance -->
-          <div class="stats shadow flex justify-center items-center mb-28">
+        <div class="add-amout-form">
+            <div class="stats shadow flex justify-center items-center mb-28 hidden">
             <div class="stat bg-slate-100 w-40 h-24">
-              <div class="stat-value text-black" id="amount">
+              <div class="stat-value text-black" id="balance">
                 $2,100
               </div>
               <div class="stat-title">Available Balance</div>
             </div>
           </div>
-          <div class="divider mb-40">
+          <div class="divider mb-40 hidden">
             <!-- action buttons -->
             <div class="flex justify-center items-start">
               <button class="btn btn-lg">Add Money</button>
               <button class="btn btn-lg">Cash out</button>
             </div>
           </div>
+        </div>
       <!-- form -->
-       <div class="flex justify-center items-center mb-36 text-black">
+       <div class="flex justify-center items-center mb-36 text-black hidden">
              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div class="card-body">
         <fieldset class="fieldset">
@@ -47,8 +49,40 @@
       </div>
         </div>
        </div>
+       <!-- cash out -->
+      <div class="cash-out-form">
+          <div class="stats shadow flex justify-center items-center mb-28">
+            <div class="stat bg-slate-100 w-40 h-24">
+              <div class="stat-value text-black" id="cash-out-balance">
+                $2,100
+              </div>
+              <div class="stat-title">Available Balance</div>
+            </div>
+          </div>
+          <div class="divider mb-40">
+            <!-- action buttons -->
+            <div class="flex justify-center items-start">
+              <button class="btn btn-lg">Add Money</button>
+              <button id="cash-out" class="btn btn-lg">Cash out</button>
+            </div>
+          </div>
+      </div>
+         <div class="flex justify-center items-center mb-36 text-black">
+             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label"> Cash-out Amount </label>
+          <input type="text" id="in-cash-out" class="input" placeholder="amount" />
+          <label class="label">pin </label>
+          <input id="in-cash-out-pin" type="password" class="input" placeholder="pin" />
+          <button id="cash-out" class="btn btn-neutral mt-4">cash out</button>
+        </fieldset>
+      </div>
+        </div>
+       </div>
       </div>
     </main>
     <script src="home.js"></script>
+    <script src="features.js"></script>
   </body>
 </html>

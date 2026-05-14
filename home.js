@@ -2,27 +2,50 @@
 document
   .getElementById("add-money")
   .addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent form submission
-    // console.log("Add money button clicked");
-    const amountInput = document.getElementById("in-add-money").value;
-    // console.log("Amount to add:", amountInput);
-    const pinInput = document.getElementById("in-pin").value;
-    // console.log("Pin entered:", pinInput);
-    // Here you can add your logic to handle the add money action, e.g., send data to the server
+    event.preventDefault();
+    // Get the amount and pin from the input fields
+    const amount = document.getElementById("in-add-money").value;
+    const pin = document.getElementById("in-pin").value;
 
-    if (pinInput === "1234") {
-      // console.log("Pin is correct. Proceeding to add money.");
+    // check the pin is correct
+    if (pin === "1234") {
+      // Get the current balance
+      const balace = document.getElementById("balance").innerText;
+      const currentBaalance = parseFloat(balace);
+      const amountToAdd = parseFloat(amount);
+      console.log(typeof currentBaalance, amountToAdd);
 
-      const amountElement = document.getElementById("amount").innerText;
-      // console.log("Current amount element:", amountElement);
+      // Calculate the new balance
+      const newBalance = currentBaalance + amountToAdd;
 
-      const addMoneynumber = parseFloat(amountInput);
-      // console.log(addMoneynumber);
-      const currentAmount = parseFloat(amountElement);
-      const newBlance = currentAmount + addMoneynumber;
-      console.log("New balance:", newBlance);
-      document.getElementById("amount").innerText = newBlance;
+      // Update the balance on the page
+      document.getElementById("balance").innerText = newBalance;
     } else {
-      alert("Incorrect pin. Cannot add money.");
+      alert("Pin is incorrect. Please try again.");
     }
   });
+
+// cash out
+document.getElementById("cash-out").addEventListener("click", function (event) {
+  event.preventDefault();
+
+  // Get the amount and pin from the input fields
+  const amount = document.getElementById("in-cash-out").value;
+  const pin = document.getElementById("in-cash-out-pin").value;
+
+  // check the pin is correct
+  if (pin === "1234") {
+    // Get the current balance
+    const balace = document.getElementById("cash-out-balance").innerText;
+    const currentBaalance = parseFloat(balace);
+    const amountToCashOut = parseFloat(amount);
+
+    // Calculate the new balance
+    const newBalance = currentBaalance - amountToCashOut;
+
+    // Update the balance on the page
+    document.getElementById("cash-out-balance").innerText = newBalance;
+  } else {
+    alert("Pin is incorrect. Please try again.");
+  }
+});
